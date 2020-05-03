@@ -1,0 +1,81 @@
+<Class1>:
+     pra: num
+     abh: pqr
+     yes: xyz
+     ayu: uvw
+     swa: mno
+
+     orientation: 'vertical'
+     BoxLayout:
+          size_hint: (1,0.15)
+          Label:
+               text: "Turns Left :"
+               text_size: self.size
+               halign: 'center'
+               valign: 'middle'
+          Label:
+               id: num
+               text: "9"
+               text_size: self.size
+               halign: 'center'
+               valign: 'middle'
+     BoxLayout:
+          size_hint: (1,0.15)
+          orientation:'horizontal'
+          Label:
+               text: "  You     :"
+          Label:
+               id: pqr
+               text: "score"
+               text_size: self.size
+               halign: 'left'
+               valign: 'middle'
+          Label:
+               text: "Bot     :"
+               text_size: self.size
+               halign: 'right'
+               valign: 'middle'
+          Label:
+               id: xyz
+               text: "score"
+     BoxLayout:
+          size_hint: (1,0.6)
+          Label:
+               id: uvw
+               text: "your selection"
+          Label:
+               id: mno
+               text: "Bot Selection"
+
+     BoxLayout:
+          size_hint: (1,0.1)
+          orientation: 'horizontal'
+          Button:
+               text: "Rock"
+               on_press: root.btn1()
+          Button:
+               text: "Paper"
+               on_press: root.btn2()
+          Button:
+               text: "Scissor"
+               on_press: root.btn3()
+
+<P>:
+     btn: cancel
+     orientation: 'vertical'
+     Label:
+          size_hint: (1,0.25)
+          font_size: 50
+          text: "Final Score"
+     BoxLayout:
+          Label:
+               font_size: 100
+               text: root.user()
+          Label:
+               font_size: 100
+               text: root.user()
+     Button:
+          id: cancel
+          size_hint: (1,0.25)
+          text: "Exit"
+          on_press : root.again()
